@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeTracker.Views.NavBarView">
+
+    <HorizontalStackLayout Spacing="30" HorizontalOptions="Center" VerticalOptions="Start">
+
+        <VerticalStackLayout>
+            <ImageButton Source="clock.png" 
+                         WidthRequest="40" 
+                         HeightRequest="40" 
+                         BackgroundColor="Transparent" 
+                         Clicked="OnTimerIconClicked" />
+            <Label Text="TimeTracker" 
+                   FontSize="10" 
+                   FontFamily="MSSansSerif" 
+                   TextColor="{StaticResource Black}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <ImageButton Source="activities.png" 
+                         WidthRequest="40" 
+                         HeightRequest="40" 
+                         BackgroundColor="Transparent" 
+                         Clicked="OnActivitiesIconClicked" />
+            <Label Text="Activities" 
+                   FontSize="10" 
+                   FontFamily="MSSansSerif" 
+                   TextColor="{StaticResource Black}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <ImageButton Source="history.png" 
+                         WidthRequest="40" 
+                         HeightRequest="40" 
+                         BackgroundColor="Transparent" 
+                         Clicked="OnHistoryIconClicked" />
+            <Label Text="History" 
+                   FontSize="10" 
+                   FontFamily="MSSansSerif" 
+                   TextColor="{StaticResource Black}" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+    </HorizontalStackLayout>
+
+</ContentView>

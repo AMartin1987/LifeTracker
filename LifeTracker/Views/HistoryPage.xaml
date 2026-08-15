@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:LifeTracker.ViewModels"
+             x:Class="LifeTracker.Views.HistoryPage"
+             Title="HISTORY.EXE"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:HistoryViewModel />
+    </ContentPage.BindingContext>
+
+    <Border Stroke="Black" StrokeThickness="2" BackgroundColor="White">
+        <CollectionView ItemsSource="{Binding HistoryList}" 
+                        VerticalScrollBarVisibility="Always">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="*, 2*, *" BackgroundColor="{StaticResource WinGray}" Padding="6,4">
+                    <Label Text="Fecha" FontAttributes="Bold" FontFamily="MSSansSerif" FontSize="11" TextColor="Black"/>
+                    <Label Grid.Column="1" Text="Actividad" FontAttributes="Bold" FontFamily="MSSansSerif" FontSize="11" TextColor="Black"/>
+                    <Label Grid.Column="2" Text="Tiempo" FontAttributes="Bold" FontFamily="MSSansSerif" FontSize="11" HorizontalTextAlignment="End" TextColor="Black"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*, 2*, *" Padding="6,4">
+                        <Label Text="{Binding DateText}" FontFamily="MSSansSerif" FontSize="11" TextColor="Black"/>
+                        <Label Grid.Column="1" Text="{Binding ActivityName}" FontFamily="MSSansSerif" FontSize="11" TextColor="Black"/>
+                        <Label Grid.Column="2" Text="{Binding DurationText}" FontFamily="MSSansSerif" FontSize="11" HorizontalTextAlignment="End" TextColor="Black"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Border>
+
+</ContentPage>

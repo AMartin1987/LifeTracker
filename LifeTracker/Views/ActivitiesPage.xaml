@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:LifeTracker.ViewModels"
+             x:Class="LifeTracker.Views.ActivitiesPage"
+             Title="ACTIVITIES.EXE"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ActivitiesViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, *" RowSpacing="15">
+
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Entry Placeholder="Ej: Estudiar DAM" 
+                   Text="{Binding NewActivityName, Mode=TwoWay}"
+                   WidthRequest="227" FontFamily="MSSansSerif"/>
+            <Button Text="Agregar" 
+                    Command="{Binding AddActivityCommand}" />
+        </HorizontalStackLayout>
+
+        <Grid Grid.Row="1" RowDefinitions="*, Auto">
+            <Border Grid.Row="0" Stroke="Black" StrokeThickness="2" BackgroundColor="White" Margin="0,0,0,15">
+                <CollectionView ItemsSource="{Binding ActivitiesList}" 
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedActivity, Mode=TwoWay}"
+                                VerticalScrollBarVisibility="Always">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="8,4">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal" />
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="{StaticResource MainLavender}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Label Text="{Binding Name}" VerticalOptions="Center" FontFamily="MSSansSerif"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Border>
+
+            <Button Grid.Row="1" 
+                    Text="Seleccionar" 
+                    WidthRequest="120" 
+                    HorizontalOptions="Center" 
+                    Command="{Binding SelectActivityCommand}" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

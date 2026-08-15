@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:LifeTracker.Views">
+
+    <ControlTemplate x:Key="Win31WindowTemplate">
+        <Grid RowDefinitions="Auto, *" 
+              RowSpacing="10" 
+              Padding="10" 
+              BackgroundColor="{StaticResource WinGray}">
+
+            <views:NavBarView Grid.Row="0" HorizontalOptions="Center" />
+
+            <Border Grid.Row="1" 
+                    Stroke="{StaticResource Black}" 
+                    StrokeThickness="2" 
+                    BackgroundColor="{StaticResource WinGray}" 
+                    StrokeShape="Rectangle">
+
+                <Grid BackgroundColor="{StaticResource Black}" Padding="0,0,2,2">
+                    <Grid BackgroundColor="{StaticResource White}" Padding="2,2,0,0">
+                        <Grid BackgroundColor="{StaticResource WinGray}" RowDefinitions="Auto, *" Padding="2">
+
+                            <Grid Grid.Row="0" BackgroundColor="{StaticResource Primary}" Padding="4">
+                                <Label Text="{TemplateBinding Title}" 
+                                       TextColor="{StaticResource White}" 
+                                       FontAttributes="Bold" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center" 
+                                       FontFamily="MSSansSerif"/>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Padding="15">
+                                <ContentPresenter />
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+
+        </Grid>
+    </ControlTemplate>
+
+    <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource WinGray}" />
+        <Setter Property="ControlTemplate" Value="{StaticResource Win31WindowTemplate}" />
+    </Style>
+
+    <Style TargetType="ContentView" x:Key="Win31SunkenPanel">
+        <Setter Property="ControlTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid BackgroundColor="{StaticResource White}" Padding="0,0,2,2">
+                        <Grid BackgroundColor="{StaticResource Black}" Padding="2,2,0,0">
+                            <Grid BackgroundColor="{StaticResource White}" Padding="20,10">
+                                <ContentPresenter />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource WinGray}" />
+        <Setter Property="BorderColor" Value="{StaticResource Black}" />
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="FontFamily" Value="MSSansSerif"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Padding" Value="8,2"/>
+        <Setter Property="MinimumHeightRequest" Value="26"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource WinDarkGray}" />
+                            <Setter Property="BorderColor" Value="{StaticResource WinDarkGray}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                            <Setter Property="TextColor" Value="{StaticResource White}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource WinDarkGray}" />
+        <Setter Property="MinimumHeightRequest" Value="26"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource WinDarkGray}" />
+                            <Setter Property="BackgroundColor" Value="{StaticResource WinGray}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Editor">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource WinDarkGray}" />
+        <Setter Property="MinimumHeightRequest" Value="60"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource WinDarkGray}" />
+                            <Setter Property="BackgroundColor" Value="{StaticResource WinGray}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource WinDarkGray}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Label" x:Key="Headline">
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="SubHeadline">
+        <Setter Property="TextColor" Value="{StaticResource MainLavender}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style TargetType="ImageButton">
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="MinimumHeightRequest" Value="26"/>
+        <Setter Property="MinimumWidthRequest" Value="26"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="Opacity" Value="0.5" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="CheckBox">
+        <Setter Property="Color" Value="{StaticResource MainLavender}" />
+        <Setter Property="MinimumHeightRequest" Value="26"/>
+        <Setter Property="MinimumWidthRequest" Value="26"/>
+    </Style>
+
+    <Style TargetType="ProgressBar">
+        <Setter Property="ProgressColor" Value="{StaticResource MainLavender}" />
+    </Style>
+
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{StaticResource MainLavender}" />
+    </Style>
+
+    <Style TargetType="Shell" ApplyToDerivedTypes="True">
+        <Setter Property="Shell.BackgroundColor" Value="{StaticResource WinGray}" />
+        <Setter Property="Shell.ForegroundColor" Value="{StaticResource Black}" />
+        <Setter Property="Shell.TitleColor" Value="{StaticResource Black}" />
+        <Setter Property="Shell.NavBarHasShadow" Value="False" />
+    </Style>
+
+</ResourceDictionary>

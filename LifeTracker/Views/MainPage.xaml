@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:LifeTracker.ViewModels"
+             x:Class="LifeTracker.Views.MainPage"
+             Title="TIMETRACKER.EXE"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Spacing="25" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="{Binding CurrentActivity, StringFormat='{0}'}"
+               FontSize="18" FontFamily="MSSansSerif" FontAttributes="Bold" TextColor="{StaticResource Primary}" HorizontalOptions="Center" />
+
+        <ContentView Style="{StaticResource Win31SunkenPanel}">
+            <Label Text="{Binding ElapsedTime}"
+                   FontSize="52" FontFamily="MSSansSerif" FontAttributes="Bold" TextColor="{StaticResource Secondary}" HorizontalOptions="Center" />
+        </ContentView>
+
+        <Button Text="{Binding ActionButtonText}"
+                Command="{Binding ToggleTimerCommand}"
+                FontSize="16" WidthRequest="150" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>
