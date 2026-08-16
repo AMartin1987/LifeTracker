@@ -5,7 +5,7 @@
 
     <Color x:Key="WinGray">#C0C0C0</Color>
     <Color x:Key="WinDarkGray">#808080</Color>
-    <Color x:Key="MainLavender">#9D9DCC</Color>
+    <Color x:Key="MainLavender">#C4BCDC</Color>
     <Color x:Key="WinNavy">#000080</Color>
     <Color x:Key="WinTeal">#64A9A7</Color>
 

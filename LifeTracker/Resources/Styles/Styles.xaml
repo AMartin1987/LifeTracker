@@ -8,7 +8,7 @@
         <Grid RowDefinitions="Auto, *" 
               RowSpacing="10" 
               Padding="10" 
-              BackgroundColor="{StaticResource WinGray}">
+              BackgroundColor="{StaticResource MainLavender}">
 
             <views:NavBarView Grid.Row="0" HorizontalOptions="Center" />
 
