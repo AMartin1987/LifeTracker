@@ -1,7 +1,7 @@
 A desktop time-tracking application designed with a cutesy Windows 3.1 aesthetic. Built with **.NET MAUI**, **C#**, and **SQLite**.
 
 ## Features
-* **Retro UI:** Windows 3.1 desktop and with cute colors, that's always on top so you remember that you need to FOCUS.
+* **Retro UI:** Windows 3.1 style desktop app with cute colors, that's always on top so you remember that you need to FOCUS.
 * **Smart Time Accumulation:** Automatically merges daily sessions for the same activity into a single record.
 * **Activity Management:** Add, switch, and manage custom activities dynamically.
 * **Persistent History:** Local session storage powered by SQLite.
