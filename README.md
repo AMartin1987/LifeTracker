@@ -1,10 +1,10 @@
 # LifeTracker
 
-A desktop time-tracking application designed with a nostalgic Windows 3.1 aesthetic. Built with **.NET MAUI**, **C#**, and **SQLite**, it helps you log, accumulate, and review daily productivity sessions seamlessly.
+A desktop time-tracking application designed with a cutesy Windows 3.1 aesthetic. Built with **.NET MAUI**, **C#**, and **SQLite**.
 
 ## Features
-* **Retro UI:** Windows 3.1 desktop and window frame design with custom controls and classic styling.
-* **Smart Time Accumulation:** Automatically merges daily sessions for the same activity into a single cumulative record.
+* **Retro UI:** Windows 3.1 desktop and with cute colors, that's always on top so you remember that you need to FOCUS.
+* **Smart Time Accumulation:** Automatically merges daily sessions for the same activity into a single record.
 * **Activity Management:** Add, switch, and manage custom activities dynamically.
 * **Persistent History:** Local session storage powered by SQLite.
 
@@ -13,3 +13,12 @@ A desktop time-tracking application designed with a nostalgic Windows 3.1 aesthe
 * **Language:** C# / XAML
 * **Architecture:** MVVM (Model-View-ViewModel)
 * **Database:** SQLite (`sqlite-net-pcl`)
+
+## NOTE: This is a personal project for practicing MAUI and C#. I'm thinking my final project for DAM will be based on this. Also, I really needed a custom time tracker to start using right now. I'll be adding a lot a new features that I personally need not only for tracking my activities but also to nudge me and help me be more FOCUSED and mindful of what i'm doing at all times. 
+
+<img width="389" height="445" alt="image" src="https://github.com/user-attachments/assets/5f1e86eb-0519-4a69-a86b-819d0dcb8ba4" />
+
+<img width="387" height="442" alt="image" src="https://github.com/user-attachments/assets/56701f77-7304-40db-8da1-9cae73432187" />
+
+<img width="386" height="442" alt="image" src="https://github.com/user-attachments/assets/fc20ef6b-55b5-498e-968b-e62851cc550f" />
+
