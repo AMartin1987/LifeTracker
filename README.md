@@ -21,7 +21,7 @@ This is a personal project for practicing MAUI and C#. I'm thinking my final pro
 
 **Activities**
 
-<img width="387" height="442" alt="image" src="https://github.com/user-attachments/assets/56701f77-7304-40db-8da1-9cae73432187" />
+<img width="386" height="442" alt="image" src="https://github.com/user-attachments/assets/585cc1af-feea-4245-9d9a-06251f91a53c" />
 
 **Tracking history**
 
